@@ -1,209 +1,92 @@
-# 🛡️ Portfolio Sinh viên An toàn Thông tin
+# Information Assurance Portfolio
 
-Portfolio chuyên nghiệp dành cho sinh viên ngành An toàn Thông tin với thiết kế hiện đại và tính năng tương tác đa dạng.
+A professional, English-language portfolio for an Information Assurance student (FPT University), focused on **Blue Team** fundamentals with a long-term path toward **Red Team** roles. Built with a modern cybersecurity theme and responsive layout.
 
-## ✨ Tính năng
+## Features
 
-- **Thiết kế Responsive**: Tương thích hoàn hảo trên mọi thiết bị
-- **Animations mượt mà**: Hiệu ứng chuyển tiếp và animation chuyên nghiệp
-- **Navigation thông minh**: Thanh điều hướng sticky với hiệu ứng scroll
-- **Skill bars động**: Thanh kỹ năng với animation theo thời gian thực
-- **Contact form**: Form liên hệ với validation và thông báo
-- **Dark theme**: Giao diện tối chuyên nghiệp phù hợp với theme cybersecurity
+- **Responsive layout** — Works on desktop, tablet, and mobile
+- **Smooth animations** — Typing effect, skill bars, and scroll-based highlights
+- **Sticky navigation** — With active section highlighting and mobile hamburger menu
+- **Animated skill bars** — Reveal on scroll with percentage labels
+- **Contact form** — Client-side validation and success/error messages
+- **Dark theme** — Cybersecurity-oriented color scheme (slate + cyan accent)
 
-## 🚀 Cấu trúc dự án
+## Project structure
 
 ```
 portfolio/
-├── index.html              # Trang chính
+├── index.html          # Main page (all content in English)
 ├── styles/
-│   └── main.css            # CSS styling chính
+│   └── main.css       # Layout, theme, and responsive styles
 ├── js/
-│   └── script.js           # JavaScript tương tác
-├── assets/                 # Thư mục chứa hình ảnh (nếu có)
-└── README.md              # Hướng dẫn dự án
+│   └── script.js      # Typing, nav, skill bars, form, smooth scroll
+├── assets/            # Optional: images, avatars
+└── README.md
 ```
 
-## 🛠️ Công nghệ sử dụng
+## Tech stack (portfolio site)
 
-- **HTML5**: Cấu trúc semantic và accessibility
-- **CSS3**: 
-  - CSS Grid & Flexbox cho layout
-  - CSS Variables cho theme management
-  - Animations và transitions
-  - Responsive design với media queries
-- **JavaScript (ES6+)**:
-  - Intersection Observer API
-  - Smooth scrolling
-  - Form validation
-  - Dynamic animations
-- **Font Awesome**: Icons chuyên nghiệp
-- **Google Fonts**: Typography (Poppins)
+- **HTML5** — Semantic structure and accessibility
+- **CSS3** — Grid, Flexbox, variables, transitions, media queries
+- **JavaScript (ES6+)** — Intersection Observer, smooth scroll, form handling
+- **Font Awesome** — Icons
+- **Google Fonts** — Space Grotesk, JetBrains Mono
 
-## 📱 Responsive Breakpoints
+## Color scheme
 
-- **Desktop**: > 1024px
-- **Tablet**: 768px - 1024px  
-- **Mobile**: < 768px
+| Variable   | Value    | Usage        |
+|-----------|----------|--------------|
+| Primary   | `#0f172a`| Background   |
+| Secondary | `#1e293b`| Cards, nav   |
+| Accent    | `#22d3ee`| Links, CTAs  |
+| Text      | `#f8fafc`| Main text    |
 
-## 🎨 Color Scheme (Cybersecurity Theme)
+## Sections
 
-```css
---primary-color: #0f172a      /* Slate 900 */
---secondary-color: #1e293b    /* Slate 800 */
---accent-color: #3b82f6       /* Blue 500 */
---text-primary: #f8fafc       /* Slate 50 */
---text-secondary: #cbd5e1     /* Slate 300 */
-```
+1. **Navigation** — Logo, menu, mobile toggle, active link on scroll
+2. **Hero** — Typing headline, short intro, CTA buttons
+3. **About** — FPT University, Year 4, tech stack (Python, Docker, VirtualBox, Burp Suite, Linux, Cloud), stats
+4. **Skills** — Programming (Python, Bash), Security (Burp Suite, Wireshark), Infrastructure (Docker, VirtualBox), Linux & Cloud
+5. **Projects** — Placeholder cards (Network lab, Web app security, Docker tools, Blue Team exercises); replace with your real links
+6. **Career path** — Short-term: Blue Team; Long-term: Red Team
+7. **Contact** — Email, LinkedIn, GitHub, contact form
+8. **Footer** — Year, Bruce Schneier quote
 
-## 📂 Các section chính
+## Customization
 
-### 1. **Navigation**
-- Logo với icon shield
-- Menu responsive với hamburger trên mobile
-- Active link highlighting
-- Smooth scroll navigation
+### Personal details
 
-### 2. **Hero Section**
-- Typing animation cho title
-- Security-themed animation
-- Call-to-action buttons
-- Gradient background
+Edit `index.html`:
 
-### 3. **About Section**
-- Thông tin cá nhân
-- Stats counter animation
-- Profile image placeholder
+- Replace `your.email@example.com` with your email
+- Update LinkedIn and GitHub `href` in the contact section
+- Add your real project URLs to `.project-link` elements
+- Optionally add a profile image: put it in `assets/` and replace the `.image-placeholder` block with an `<img>` (see comments in CSS for sizing)
 
-### 4. **Skills Section**
-- 4 categories: Network Security, Penetration Testing, Programming, Digital Forensics
-- Animated skill bars với percentage
-- Hover effects
+### Skills and percentages
 
-### 5. **Projects Section**
-- Grid layout cho projects
-- Hover animations
-- Tech tags
-- External links (GitHub, Demo)
+In the `#skills` section, change `data-width` on each `.skill-fill` and the corresponding `.skill-pct` text.
 
-### 6. **Certifications Section**
-- Certificate cards với icons
-- Achievement display
-- Date information
+### Adding a real contact backend
 
-### 7. **Contact Section**
-- Contact information
-- Working contact form với validation
-- Social media links
-- Success/error notifications
+The form currently shows a success message only. To send emails or store submissions, replace the form handler in `js/script.js` with a `fetch()` call to your API or form service (e.g. Formspree, Netlify Forms, or your own backend).
 
-## ⚙️ Cài đặt và sử dụng
+## Running locally
 
-### Bước 1: Clone hoặc download dự án
-```bash
-git clone <repository-url>
-cd portfolio
-```
+1. Clone or download the project.
+2. Open `index.html` in a browser, or use a local server (e.g. VS Code Live Server).
 
-### Bước 2: Mở trong browser
-- Mở file `index.html` trong trình duyệt web
-- Hoặc sử dụng Live Server extension trong VS Code
+No build step required.
 
-### Bước 3: Tùy chỉnh nội dung
+## Browser support
 
-#### Thay đổi thông tin cá nhân:
-1. Mở `index.html`
-2. Tìm và thay đổi:
-   - Tên: "Nguyễn Văn A"
-   - Email: "nguyenvana@email.com" 
-   - Số điện thoại: "+84 123 456 789"
-   - Địa chỉ: "Hà Nội, Việt Nam"
+- Chrome, Firefox, Safari, Edge (recent versions)
+- Smooth scroll and Intersection Observer supported in all modern browsers
 
-#### Cập nhật skills:
-1. Trong section `#skills`
-2. Thay đổi skill names và data-width percentages
-3. Thêm/xóa skill categories nếu cần
+## License
 
-#### Thêm projects mới:
-1. Copy cấu trúc `.project-card`
-2. Thay đổi:
-   - Icon (FontAwesome class)
-   - Tiêu đề và mô tả
-   - Tech tags
-   - Links (GitHub, Demo)
-
-#### Cập nhật chứng chỉ:
-1. Trong section `#certifications`
-2. Thay đổi tên chứng chỉ, mô tả và năm
-
-## 🖼️ Thêm hình ảnh
-
-### Thêm avatar:
-1. Đặt ảnh vào thư mục `assets/`
-2. Thay thế `.image-placeholder` trong CSS:
-```css
-.about-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-```
-
-### Thêm project thumbnails:
-1. Thay thế `.project-image i` bằng thẻ `<img>`
-2. Update CSS accordingly
-
-## 🎭 Tùy chỉnh theme
-
-### Thay đổi màu sắc:
-Chỉnh sửa CSS variables trong `:root`:
-```css
-:root {
-    --primary-color: #your-color;
-    --accent-color: #your-accent;
-    /* ... */
-}
-```
-
-### Thay đổi fonts:
-1. Update Google Fonts link trong `<head>`
-2. Thay đổi `font-family` trong CSS
-
-## 📊 Performance
-
-- **Optimized images**: Sử dụng format WebP nếu có thể
-- **Lazy loading**: Implement cho images
-- **Minified CSS/JS**: Nén code cho production
-- **CDN**: FontAwesome và Google Fonts qua CDN
-
-## 🔧 Browser Support
-
-- Chrome 70+
-- Firefox 65+
-- Safari 12+
-- Edge 79+
-
-## 📝 License
-
-MIT License - Tự do sử dụng cho mục đích cá nhân và thương mại.
-
-## 🤝 Đóng góp
-
-1. Fork dự án
-2. Tạo feature branch
-3. Commit changes
-4. Push to branch  
-5. Tạo Pull Request
-
-## 📞 Liên hệ
-
-- **Email**: nguyenvana@email.com
-- **LinkedIn**: [Your LinkedIn]
-- **GitHub**: [Your GitHub]
+MIT — Free for personal and commercial use.
 
 ---
 
-**Happy Coding! 🛡️💻**
-
-> "Security is not a product, but a process" - Bruce Schneier "# nguyennt.github.io" 
+*"Security is not a product, but a process."* — Bruce Schneier
