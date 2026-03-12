@@ -189,6 +189,12 @@ a:hover {
     font-size: 1.05rem;
 }
 
+@media (min-width: 769px) {
+    .hero-description {
+        white-space: nowrap;
+    }
+}
+
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
